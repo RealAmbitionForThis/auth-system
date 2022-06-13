@@ -9,11 +9,11 @@ login = async (appKey, username, password, hwid = null) => {
     const userData = await getUserData(username);
     const applicationData = await getProgramData(appKey);
 
-    if (!await userExists(username))
-        return responces.INVALID_USERNAME;
-
     if (!await programExists(appKey))
         return responces.PROG_DOSNT_EXIST;
+
+    if (!await userExists(applicationData.appName, username))
+        return responces.INVALID_USERNAME;
 
     if (userData.password !== password)
         return responces.WRONG_PASS;
@@ -32,3 +32,5 @@ login = async (appKey, username, password, hwid = null) => {
 
     return [[responces.SUCCESS], [userData]];
 }
+
+module.exports = { login }

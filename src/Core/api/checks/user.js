@@ -10,7 +10,7 @@ checkUserStatus = async (userData) => {
     if(userData.banned == 1)
         return responces.BANNED;
 
-    if(getCurrentTime() > data.expires)
+    if(getCurrentTime() > userData.expires)
         return responces.NO_SUBSCRIPTION;
 
     return responces.SUCCESS;

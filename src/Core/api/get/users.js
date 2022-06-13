@@ -12,6 +12,7 @@ userExists = (programName, username) =>
 {
     return new Promise((resolve, reject) => {
         con.query('SELECT username FROM users WHERE program=? AND username=?', [programName, username], (err, res) => {
+
             if(res.length === 1)
                 return resolve(true);
             else

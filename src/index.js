@@ -1,11 +1,10 @@
 const express = require('express')
-const { apiRouter } = require('./routes/api');
-const {getProgramData} = require("./Core/api/get/program");
-const {userExists, getUserData} = require("./Core/api/get/users");
-const {checkUserStatus} = require("./Core/api/checks/user");
-const {makeSesID, getCurrentTime, timeToGive} = require("./Utils/Math");
-const {getKeyData} = require("./Core/api/get/key");
+const {apiRouter} = require("./routes/api");
+const bodyParser = require('body-parser')
 const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use('/api', apiRouter);
 
@@ -19,3 +18,5 @@ app.listen(process.env.PORT || 9000, async () => {
      console.log("Random Err")
     }
 })
+
+//TODO make it E2EE
