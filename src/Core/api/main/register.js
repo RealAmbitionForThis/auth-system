@@ -34,3 +34,5 @@ register = async (appKey, username, password, userKey, hwid) =>
 
     return addUser(appKey, username, password, hwid, userKey);
 }
+
+module.exports = { register }
