@@ -1,0 +1,35 @@
+{
+  "name": "skiddy",
+  "version": "1.0.0",
+  "description": "Simple Authentication System for all you pay-2-cheat people :)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spring7331/skiddy.git"
+  },
+  "keywords": [
+    "auth",
+    "p2c",
+    "auth",
+    "login",
+    "system",
+    "cheat",
+    "loader",
+    "loader"
+  ],
+  "author": "Spring",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spring7331/skiddy/issues"
+  },
+  "homepage": "https://github.com/Spring7331/skiddy#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  }
+}
